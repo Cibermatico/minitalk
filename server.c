@@ -19,7 +19,7 @@ static void	action(int sig, siginfo_t *info, void *context)
 	static int				i;
 	static pid_t			client_pid;
 	static unsigned char	c;
-    
+
 	(void)context;
 	if (!client_pid)
 		client_pid = info->si_pid;
