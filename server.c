@@ -50,6 +50,7 @@ int	main(void)
 	ft_putchar_fd('\n', 1);
 	s_sigaction.sa_sigaction = action;
 	s_sigaction.sa_flags = SA_SIGINFO;
+	sigemptyset(&s_sigaction.sa_mask);
 	sigaction(SIGUSR1, &s_sigaction, 0);
 	sigaction(SIGUSR2, &s_sigaction, 0);
 	while (1)
